@@ -28,23 +28,48 @@ However, the project contains **intentional bugs** that provide a good learning 
 - Node.js and npm installed. If you don't have them, download and install [Node.js](https://nodejs.org/).
 
 ### Steps:
+1. Fork [this](https://github.com/cn10xdev/ECommerce_Product_Page) repository.
 
-1. Clone the repository:
+2. Clone the forked repository:
     ```bash
-    git clone https://github.com/your-username/ecommerce-product-page.git
+    git clone https://github.com/<your-username>/ecommerce-product-page.git
+    ```
+
+3. Navigate to the project directory:
+    ```bash
     cd ecommerce-product-page
     ```
 
-2. Install the required dependencies:
+4. Create a new branch:
+    ```bash
+    git checkout -b <your_branch_name>
+    ```
+
+5. Install the required dependencies:
     ```bash
     npm install
     ```
 
-3. Start the development server:
+6. Start the development server:
     ```bash
     npm start
     ```
     This will run the app in the development mode. Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+
+7. Make changes.
+
+9. Stage your changes and commit:
+    ```bash
+    git add .
+    git commit -m "<your_commit_message>"
+    ```
+
+10. Push your local commits to the remote repo:
+    ```bash
+    git push -u origin <your_branch_name>
+    ```
+
+11. Create a `Pull-Request` to develop!
 
 ---
 

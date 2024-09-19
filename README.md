@@ -1,5 +1,6 @@
 # E-Commerce Product Page
 
+
 This is a simple e-commerce product page built using **React**, **JavaScript**, **HTML**, and **CSS**. It provides a learning opportunity for developers by intentionally introducing bugs and challenges that need to be fixed to create a fully functioning prodcut page.
 
 ## Table of Contents

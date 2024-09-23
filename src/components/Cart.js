@@ -18,7 +18,7 @@ function Cart({ cart, updateQuantity }) {
 
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
-          <Modal.Title>Cart Items</Modal.Title>
+          <Modal.Title style={{color: 'black'}}>Cart Items</Modal.Title>
         </Modal.Header>
         <Modal.Body>
         <div className="cart" style={{color: 'black'}}>

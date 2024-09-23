@@ -3,12 +3,15 @@ import ProductCard from './components/ProductCard';
 import Cart from './components/Cart';
 import './styles.css';
 import { ToggleTheme } from './components/NavbarToggle';
-import styled from "styled-components";
+import {styled, createGlobalStyle} from "styled-components";
 
-const AppDiv = styled.div`
-    background: ${(props) => props.colorProp? 'black': 'white'};
-    color: ${(props) => props.colorProp? 'white': 'black'}
-`;
+const GlobalStyle = createGlobalStyle`
+  body {
+    background: ${(props) => props.colorProp? 'black': 'rgb(169, 218, 243)'};
+    color: ${(props) => props.colorProp? 'white': 'black'};
+  }`;
+
+
 
 function App() {
     const [cart, setCart] = useState([]);
@@ -89,7 +92,9 @@ function App() {
     
     console.log(theme.toggleState)
     return (
-        <AppDiv className="App" colorProp={ parseInt(toggleValue) }>
+        <>
+        <GlobalStyle colorProp={ parseInt(toggleValue) }/>
+        <div className="App" colorProp={ parseInt(toggleValue) }>
             <ToggleTheme data={parseInt(toggleValue)} 
                 toggleThemeFunc ={toggleThemeFunc}
                 
@@ -101,7 +106,8 @@ function App() {
                 ))}
             </div>
             <Cart cart={cart} updateQuantity={updateQuantity} />
-        </AppDiv>
+        </div>
+        </>
     );
 }
 

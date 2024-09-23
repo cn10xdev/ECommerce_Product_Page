@@ -1,6 +1,6 @@
 import React from "react";
 //import styled from "styled-components";
-
+import Button from 'react-bootstrap/Button';
 
 //export class ToggleTheme extends React.Component{
 export function ToggleTheme(props){
@@ -17,9 +17,10 @@ export function ToggleTheme(props){
         return(
            
             <>
-                <button id="toggle-button" onClick={()=> props.toggleThemeFunc()}>
+            <Button variant="primary" id="toggle-button" onClick={()=> props.toggleThemeFunc()}>{themeButtonDisplay}</Button>
+                {/*<button id="toggle-button" onClick={()=> props.toggleThemeFunc()}>
                     {themeButtonDisplay}
-                </button>
+                </button>*/}
             </>
         )
     

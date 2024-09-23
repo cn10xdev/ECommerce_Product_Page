@@ -57,6 +57,10 @@ However, the project contains **intentional bugs** that provide a good learning 
 
 6. Start the development server:
     ```bash
+    npm start
+    ```
+    or
+    ```bash
     npm run start
     ```
     This will run the app in the development mode. Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
@@ -74,7 +78,7 @@ However, the project contains **intentional bugs** that provide a good learning 
     git push -u origin <your_branch_name>
     ```
 
-11. Create a `Pull-Request` to the main branch(main branch of the original repo) from your forked repo branch
+11. Create a `Pull-Request` to the main branch (main branch of the original repo) from your forked repo branch
 
 ---
 
@@ -95,7 +99,7 @@ ECommerce_Product_Page/
 │   ├── index.js             # Entry point for the app
 │   ├── styles.css           # Styling for the components
 │
-|-- .gitignore               # To ignore the files and folders from git
+├── .gitignore               # To ignore the files and folders from git
 ├── package.json             # Project configuration and dependencies
 └── README.md                # Documentation for the project
 

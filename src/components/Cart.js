@@ -7,7 +7,11 @@ function Cart({ cart = [], updateQuantity }) {
     const totalPrice = cart.reduce((total, item) => total + item.price * item.quantity, 0);
 
     return (
-        <div className={`cart mt-8 p-4 bg-white rounded-md shadow-md transition-all duration-300 ${totalItems === 0 ? 'w-64 mx-auto' : 'w-48 mx-auto'}`}>
+        <div
+            className={`cart mt-8 p-4 bg-white rounded-md shadow-md transition-all duration-300 ${
+                totalItems === 0 ? 'w-full mx-auto' : 'w-1/2 mx-auto'
+            }`}
+        >
             <h2 className="text-2xl font-bold mb-4">Cart</h2>
             {totalItems === 0 ? (
                 <div className="flex flex-col items-center">
@@ -16,7 +20,7 @@ function Cart({ cart = [], updateQuantity }) {
                 </div>
             ) : (
                 <>
-                    {cart.map(item => (
+                    {cart.map((item) => (
                         <div key={item.id} className="cart-item flex justify-between items-center mb-4">
                             <div>
                                 <p className="text-lg">{item.name}</p>

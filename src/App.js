@@ -2,9 +2,23 @@ import React, { useState } from 'react';
 import ProductCard from './components/ProductCard';
 import Cart from './components/Cart';
 import './styles.css';
+import { ToggleTheme } from './components/NavbarToggle';
+import styled from "styled-components";
+
+const AppDiv = styled.div`
+    background: ${(props) => props.colorProp? 'black': 'white'};
+    color: ${(props) => props.colorProp? 'white': 'black'}
+`;
 
 function App() {
     const [cart, setCart] = useState([]);
+    const [theme, setTheme] = useState({
+        toggleState : false,
+        theme : "Light",
+        themeButtonDisplay : "Dark Mode",
+        color: "red"
+    })
+
     const products = [
         {
             id: 1,
@@ -21,6 +35,8 @@ function App() {
             quantity: 1,
         }
     ];
+
+    const toggleValue = localStorage.getItem('toggleValue');
 
     const addToCart = (product) => {
         let updatedCart = [...cart];
@@ -45,8 +61,39 @@ function App() {
         }
     };
 
+    const toggleThemeFunc = () =>{
+        let updatedTheme = {...theme};
+        console.log(theme.toggleState)
+        updatedTheme.toggleState = !(updatedTheme.toggleState);
+        
+        //console.log(themeDetails.toggleState)
+
+        if(updatedTheme.toggleState == false){
+            updatedTheme.themeButtonDisplay = "Dark Mode";
+            updatedTheme.theme = "Light";
+            updatedTheme.color = "white"
+            localStorage.setItem('toggleValue',0)
+        }else{
+            updatedTheme.themeButtonDisplay = "Light Mode";
+            updatedTheme.theme = "Dark";
+            updatedTheme.color = "black";
+            localStorage.setItem('toggleValue',1)
+        }
+        //
+        console.log(localStorage.getItem('toggleValue'))
+        setTheme(updatedTheme);
+        
+        //console.log(theme.toggleState)
+    }
+
+    
+    console.log(theme.toggleState)
     return (
-        <div className="App">
+        <AppDiv className="App" colorProp={ parseInt(toggleValue) }>
+            <ToggleTheme data={parseInt(toggleValue)} 
+                toggleThemeFunc ={toggleThemeFunc}
+                
+                 />
             <h1>Product Page</h1>
             <div className="products">
                 {products.map(product => (
@@ -54,7 +101,7 @@ function App() {
                 ))}
             </div>
             <Cart cart={cart} updateQuantity={updateQuantity} />
-        </div>
+        </AppDiv>
     );
 }
 

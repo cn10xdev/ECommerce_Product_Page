@@ -56,9 +56,12 @@ h1 {
     .product-card {
         width: 90%;
     }
-
+    
     .cart {
         width: 90%;
         margin: 0 auto;
     }
+}
+.toggle-btn{
+    margin: 20px;
 }

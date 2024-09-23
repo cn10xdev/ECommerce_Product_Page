@@ -10,7 +10,7 @@ function App() {
             id: 1,
             name: 'Product 1',
             price: 599,
-            image: 'https://via.placeholder.com/300', // Update this image URL accordingly
+            image: 'https://via.placeholder.com/300',
             quantity: 1,
         },
         {
@@ -25,24 +25,20 @@ function App() {
     const addToCart = (product) => {
         setCart(prevCart => {
             const productIndex = prevCart.findIndex(item => item.id === product.id);
-
             if (productIndex !== -1) {
-                // If the product already exists in the cart, increase the quantity
                 const updatedCart = prevCart.map(item =>
                     item.id === product.id ? { ...item, quantity: item.quantity + 1 } : item
                 );
                 return updatedCart;
             } else {
-                // If the product doesn't exist, add it to the cart
                 return [...prevCart, { ...product }];
             }
         });
     };
 
-    // Define the updateQuantity function
     const updateQuantity = (productId, quantity) => {
-        if (quantity < 1) return; // Prevent setting quantity to less than 1
-        const updatedCart = cart.map(item => 
+        if (quantity < 1) return;
+        const updatedCart = cart.map(item =>
             item.id === productId ? { ...item, quantity } : item
         );
         setCart(updatedCart);

@@ -8,7 +8,7 @@ body {
 
 h1 {
     text-align: center;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 /* Product Card Styles */
@@ -16,14 +16,21 @@ h1 {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+    margin-top: 3%;
+    border: 3px solid black;
+    box-shadow: 0px 0px 5px 2px rgb(231, 239, 164);
+    padding: 20px;
+    width: 90%;
+    margin-left: 5%;
 }
 
 .product-card {
-    border: 1px solid #ddd;
+    border: 1px solid black;
     padding: 20px;
     width: 250px;
     text-align: center;
     margin-bottom: 20px;
+    box-shadow: 0px 0px 5px 2px rgb(231, 239, 164);
 }
 
 .product-image {
@@ -61,4 +68,11 @@ h1 {
         width: 90%;
         margin: 0 auto;
     }
+}
+
+#toggle-button{
+    position: absolute;
+    left: 80%;
+    height: 40px;
+    width: 100px;
 }

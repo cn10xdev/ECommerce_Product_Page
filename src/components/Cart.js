@@ -4,29 +4,7 @@ import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 
 function Cart({ cart, updateQuantity }) {
-    /*return (
-        <div className="cart">
-            <h2>Cart</h2>
-            {cart.length === 0 ? (
-                <p>Your cart is empty</p>
-            ) : (
-                cart.map(item => (
-                    <div key={item.id} className="cart-item">
-                        <p>{item.name}</p>
-                        <p>Price: ${item.price}</p>
-                        <input
-                            type="number"
-                            min="1"
-                            value={item.quantity}
-                            onChange={(e) => updateQuantity(item.id, parseInt(e.target.value))}
-                        />
-                    </div>
-                ))
-            )}
-        </div>
-    );*/
-
-
+    
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
@@ -43,7 +21,7 @@ function Cart({ cart, updateQuantity }) {
           <Modal.Title>Cart Items</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-        <div className="cart">
+        <div className="cart" style={{color: 'black'}}>
             <h2>Cart</h2>
             {cart.length === 0 ? (
                 <p>Your cart is empty</p>
@@ -74,6 +52,29 @@ function Cart({ cart, updateQuantity }) {
       </Modal>
     </>
   );
+
+
+  /*return (
+        <div className="cart">
+            <h2>Cart</h2>
+            {cart.length === 0 ? (
+                <p>Your cart is empty</p>
+            ) : (
+                cart.map(item => (
+                    <div key={item.id} className="cart-item">
+                        <p>{item.name}</p>
+                        <p>Price: ${item.price}</p>
+                        <input
+                            type="number"
+                            min="1"
+                            value={item.quantity}
+                            onChange={(e) => updateQuantity(item.id, parseInt(e.target.value))}
+                        />
+                    </div>
+                ))
+            )}
+        </div>
+    );*/
 }
 
 export default Cart;

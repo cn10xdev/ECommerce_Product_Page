@@ -44,6 +44,15 @@ function App() {
             setCart(updatedCart);
         }
     };
+    const removeFromCart=(product)=>{
+        let updatedCart = [...cart];
+        const productIndex = updatedCart.findIndex(item => item.id === product.id);
+        if (productIndex !== -1) {
+            updatedCart.splice(productIndex, 1);
+        
+        }
+        setCart(updatedCart);
+    }
 
     return (
         <div className="App">
@@ -53,7 +62,7 @@ function App() {
                     <ProductCard key={product.id} product={product} addToCart={addToCart} />
                 ))}
             </div>
-            <Cart cart={cart} updateQuantity={updateQuantity} />
+            <Cart cart={cart} updateQuantity={updateQuantity} removeFromCart={removeFromCart} />
         </div>
     );
 }

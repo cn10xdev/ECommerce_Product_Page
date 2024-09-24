@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Cart({ cart, updateQuantity }) {
+function Cart({ cart, updateQuantity, removeFromCart }) {
     return (
         <div className="cart">
             <h2>Cart</h2>
@@ -9,8 +9,10 @@ function Cart({ cart, updateQuantity }) {
             ) : (
                 cart.map(item => (
                     <div key={item.id} className="cart-item">
+                        
                         <p>{item.name}</p>
                         <p>Price: ${item.price}</p>
+                        <button onClick={()=>removeFromCart(item)}>Delete</button>
                         <input
                             type="number"
                             min="1"

@@ -10,7 +10,7 @@ function Cart({ cart, updateQuantity }) {
                 cart.map(item => (
                     <div key={item.id} className="cart-item">
                         <p>{item.name}</p>
-                        <p>Price: ${item.price}</p>
+                        <p>Price: ${item.price * item.quantity}</p>
                         <input
                             type="number"
                             min="1"

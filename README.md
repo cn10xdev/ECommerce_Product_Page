@@ -1,7 +1,7 @@
-# E-Commerce Product Page
+# E-Commerce App
 
 
-This is a simple e-commerce product page built using **React**, **JavaScript**, **HTML**, and **CSS**. It provides a learning opportunity for developers by intentionally introducing bugs and challenges that need to be fixed to create a fully functioning prodcut page.
+This is a simple e-commerce product page built using **React**, **JavaScript**, **HTML**, and **CSS**. It provides a learning opportunity for developers by intentionally introducing bugs and challenges that need to be fixed to create a fully functioning product page.
 
 ## Table of Contents
 1. [Project Overview](#project-overview)
@@ -16,10 +16,10 @@ This is a simple e-commerce product page built using **React**, **JavaScript**, 
 
 This project simulates an e-commerce product page where users can:
 - View products with details like name, price, and image.
-- Add items to thier shopping cart.
+- Add items to their shopping cart.
 - Update the quantity of items in the cart.
   
-However, the project contains **intentional bugs** that provide a good learning opportunity for new developers. Debugging these will hlep you improve your problem-solving, DOM manipulation, and responsive desgn skills.
+However, the project contains **intentional bugs** that provide a good learning opportunity for new developers. Debugging these will help you improve your problem-solving, DOM manipulation, and responsive design skills.
 
 ---
 
@@ -38,12 +38,16 @@ However, the project contains **intentional bugs** that provide a good learning 
 
 3. Navigate to the project directory:
     ```bash
-    cd ecommerce-product-page
+    cd ECommerce_Product_Page
     ```
 
 4. Create a new branch:
     ```bash
     git checkout -b <your_branch_name>
+    ```
+    or
+    ```bash
+    git switch -c <your_branch_name>
     ```
 
 5. Install the required dependencies:
@@ -54,6 +58,10 @@ However, the project contains **intentional bugs** that provide a good learning 
 6. Start the development server:
     ```bash
     npm start
+    ```
+    or
+    ```bash
+    npm run start
     ```
     This will run the app in the development mode. Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
@@ -70,14 +78,14 @@ However, the project contains **intentional bugs** that provide a good learning 
     git push -u origin <your_branch_name>
     ```
 
-11. Create a `Pull-Request` to develop!
+11. Create a `Pull-Request` to the main branch (main branch of the original repo) from your forked repo branch
 
 ---
 
 ## Project Structure
 
 ```plaintext
-ecommerce-product-page/
+ECommerce_Product_Page/
 │
 ├── public/
 │   ├── index.html          # HTML template for the app
@@ -88,9 +96,10 @@ ecommerce-product-page/
 │   │   ├── Cart.js          # Component for displaying the shopping cart
 │   │
 │   ├── App.js               # Main app component
-│   ├── index.js             # Entry piont for the app
+│   ├── index.js             # Entry point for the app
 │   ├── styles.css           # Styling for the components
 │
+├── .gitignore               # To ignore the files and folders from git
 ├── package.json             # Project configuration and dependencies
 └── README.md                # Documentation for the project
 

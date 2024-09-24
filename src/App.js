@@ -61,6 +61,11 @@ function App() {
         }
     };
 
+    // function to calculate the total from the cart
+    const total = () => {
+        return cart.reduce((acc, item) => acc + item.price * item.quantity, 0);
+    };
+
     return (
         <>
             <Navbar changeTheme={changeTheme} darkMode={darkMode} />
@@ -71,7 +76,7 @@ function App() {
                         <ProductCard key={product.id} product={product} addToCart={addToCart} />
                     ))}
                 </div>
-                <Cart cart={cart} updateQuantity={updateQuantity} />
+                <Cart cart={cart} updateQuantity={updateQuantity} total={total} />
             </div>
         </>
     );

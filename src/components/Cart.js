@@ -1,9 +1,10 @@
 import React from 'react';
 
-function Cart({ cart, updateQuantity }) {
+function Cart({ cart, updateQuantity, total }) {
     return (
         <div className="cart">
             <h2>Cart</h2>
+            <p>Total - ${total()} </p>
             {cart.length === 0 ? (
                 <p>Your cart is empty</p>
             ) : (

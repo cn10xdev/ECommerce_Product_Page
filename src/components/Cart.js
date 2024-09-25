@@ -15,8 +15,9 @@ function Cart({ cart, updateQuantity, total }) {
                         <input
                             type="number"
                             min="1"
+                            max="5"
                             value={item.quantity}
-                            onChange={(e) => updateQuantity(item.id, parseInt(e.target.value))}
+                            onChange={(e) => updateQuantity(item.id, Math.min(6, parseInt(e.target.value)))}
                         />
                     </div>
                 ))

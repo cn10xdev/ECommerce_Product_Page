@@ -21,7 +21,35 @@ function App() {
             price: 100,
             image: 'https://via.placeholder.com/150',
             quantity: 1,
-        }
+        },
+        {
+            id: 3,
+            name: 'Product 3',
+            price: 300,
+            image: 'https://via.placeholder.com/150',
+            quantity: 1,
+        },
+        {
+            id: 4,
+            name: 'Product 4',
+            price: 400,
+            image: 'https://via.placeholder.com/150',
+            quantity: 1,
+        },
+        {
+            id: 5,
+            name: 'Product 5',
+            price: 500,
+            image: 'https://via.placeholder.com/150',
+            quantity: 1,
+        },
+        {
+            id: 6,
+            name: 'Product 6',
+            price: 600,
+            image: 'https://via.placeholder.com/150',
+            quantity: 1,
+        },
     ];
 
     // function to toggle between dark and light mode
@@ -40,22 +68,26 @@ function App() {
 
     const addToCart = (product) => {
         let updatedCart = [...cart];
-        const productIndex = updatedCart.findIndex(item => item.id === product.id);
+        let maxCount = 5;
+        if (updatedCart.length < maxCount) {
+            const productIndex = updatedCart.findIndex(item => item.id === product.id);
 
-        if (productIndex !== -1) {
-            updatedCart[productIndex].quantity += 1;
-        } else {
-            updatedCart.push(product);
+            if (productIndex !== -1) {
+                updatedCart[productIndex].quantity += 1;
+            } else {
+                updatedCart.push(product);
+            }
+            setCart(updatedCart);
         }
 
-        setCart(updatedCart);
     };
+
+    console.log(cart);
 
     const updateQuantity = (productId, quantity) => {
         let updatedCart = [...cart];
         const productIndex = updatedCart.findIndex(item => item.id === productId);
-
-        if (productIndex !== -1 && quantity > 0) {
+        if (productIndex !== -1 && quantity > 0 && quantity <= 5) {
             updatedCart[productIndex].quantity = quantity;
             setCart(updatedCart);
         }

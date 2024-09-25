@@ -1,9 +1,10 @@
 import React from 'react';
 
-function Cart({ cart, updateQuantity }) {
+function Cart({ cart, updateQuantity, total }) {
     return (
         <div className="cart">
             <h2>Cart</h2>
+            <p>Total - ${total()} </p>
             {cart.length === 0 ? (
                 <p>Your cart is empty</p>
             ) : (
@@ -14,8 +15,9 @@ function Cart({ cart, updateQuantity }) {
                         <input
                             type="number"
                             min="1"
+                            max="5"
                             value={item.quantity}
-                            onChange={(e) => updateQuantity(item.id, parseInt(e.target.value))}
+                            onChange={(e) => updateQuantity(item.id, Math.min(6, parseInt(e.target.value)))}
                         />
                     </div>
                 ))

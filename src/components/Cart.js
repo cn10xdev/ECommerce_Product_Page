@@ -1,6 +1,17 @@
 import React from 'react';
+import { updateQuantityActionCreator } from '../redux/actions/actions';
+import { useDispatch, useSelector } from 'react-redux';
 
-function Cart({ cart, updateQuantity }) {
+function Cart() {
+
+    const cart = useSelector(state => state.cart);
+    const dispatch = useDispatch();
+    
+    const updateQuantity = (productId, quantity) => {
+        dispatch(updateQuantityActionCreator(productId, quantity));
+    };
+
+
     return (
         <div className="cart">
             <h2>Cart</h2>

@@ -1,6 +1,15 @@
 import React from 'react';
+import { useDispatch } from 'react-redux';
+import { addToCartActionCreator } from '../redux/actions/actions';
 
-function ProductCard({ product, addToCart }) {
+function ProductCard({product}) {
+
+    const dispatch = useDispatch()
+
+    function addToCart(){
+        dispatch(addToCartActionCreator(product))
+    }
+
     return (
         <div className="product-card">
             <img src={product.image} alt={product.name} className="product-image" />

@@ -74,7 +74,11 @@ const Products = ({ cart, updateQuantity, addToCart }) => {
 
                 <div className="absolute right-0 bottom-5 w-full flex items-center justify-center mt-6 z-50 cursor-pointer">
                   {" "}
-                  <AddToCartButton title="Add To Cart" onClick={addToCart} />
+                  <AddToCartButton
+                    title="Add To Cart"
+                    onClick={addToCart}
+                    product={item}
+                  />
                 </div>
 
                 <ClipPath />

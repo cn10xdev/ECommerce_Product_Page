@@ -10,9 +10,9 @@ import Home from "./pages/Home/Home";
 
 function App() {
   const [cart, setCart] = useState([]);
+  console.log(cart);
 
   const addToCart = (product) => {
-    console.log("************************");
     let updatedCart = [...cart];
     const productIndex = updatedCart.findIndex(
       (item) => item.id === product.id
@@ -40,7 +40,7 @@ function App() {
   const router = createBrowserRouter([
     {
       path: "/",
-      element: <Navbar />,
+      element: <Navbar cart={cart} />,
       children: [
         {
           index: true,

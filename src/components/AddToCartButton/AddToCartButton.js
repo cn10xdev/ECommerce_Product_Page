@@ -1,8 +1,8 @@
 import styles from "./AddToCartButton.module.css";
 
-const AddToCartButton = ({ title, onClick }) => {
+const AddToCartButton = ({ title, onClick, product }) => {
   return (
-    <button className={styles.button} onClick={onClick}>
+    <button className={styles.button} onClick={() => onClick(product)}>
       <span>{title}</span>
       <svg fill="#fff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
         <g stroke-width="0" id="SVGRepo_bgCarrier"></g>

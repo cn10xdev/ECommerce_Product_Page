@@ -8,7 +8,7 @@ export const products = [
     price: 2499,
     Brand: "Fastrack",
     Review: 36,
-    quantity: 40,
+    quantity: 0,
     light: true,
     image: [
       "https://m.media-amazon.com/images/I/61mPyZEfN7L._SY355_.jpg",
@@ -44,7 +44,7 @@ export const products = [
     price: 649,
     Brand: "FUR JADEN",
     Review: 104,
-    quantity: 36,
+    quantity: 0,
     light: true,
     image: [
       "https://m.media-amazon.com/images/I/61egMfcDWlL._SX522_.jpg",
@@ -85,7 +85,7 @@ export const products = [
     price: 3699,
     Brand: "Moccasin",
     Review: 48,
-    quantity: 80,
+    quantity: 0,
     light: true,
     image: [
       "https://m.media-amazon.com/images/I/713sRfW7PkL._SY500_.jpg",
@@ -125,7 +125,7 @@ export const products = [
     price: 529,
     Brand: "Campus",
     Review: 56,
-    quantity: 4,
+    quantity: 0,
     light: true,
     image: [
       "https://m.media-amazon.com/images/I/61ePa5fEKnL._SY625_.jpg",
@@ -170,7 +170,7 @@ export const products = [
     price: 49999,
     Brand: "Apple",
     Review: 150,
-    quantity: 9,
+    quantity: 0,
     light: true,
     image: [
       "https://m.media-amazon.com/images/I/71xb2xkN5qL._SX522_.jpg",
@@ -221,7 +221,7 @@ export const products = [
     price: 93950,
     Brand: "Nikon",
     Review: 56,
-    quantity: 15,
+    quantity: 0,
     light: true,
     image: [
       "https://m.media-amazon.com/images/I/71iKNJ6rVIL._SY355_.jpg",

@@ -33,9 +33,9 @@ export default function SignIn() {
             More than just a reliable e-commerce platform
           </div>
           <div className=" font-extrabold text-3xl mb-3 w-full ">
-            <span className="text-first">Welcome Back</span>, now unleash the
-            shopper <span className="text-first">inside you</span>, Enjoy your
-            dream deals
+            <span className="text-[#AC6AFF]">Welcome Back</span>, now unleash
+            the shopper <span className="text-first">inside you</span>, Enjoy
+            your dream deals
           </div>
           <div className="w-full flex items-center justify-center lg:justify-start">
             <img

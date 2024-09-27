@@ -51,7 +51,10 @@ const Navbar = () => {
                   key={item.id}
                   to={item.url}
                   onClick={handleClick}
-                  className={`block relative font-code text-2xl uppercase lg:cursive lg:text-sm lg:capitalize transition-colors hover:text-color-1 ${
+                  style={({ isActive }) =>
+                    isActive ? { color: "#AC6AFF" } : {}
+                  }
+                  className={`block relative font-code text-2xl uppercase lg:cursive lg:text-[1rem] lg:capitalize transition-colors hover:text-color-1 ${
                     item.onlyMobile ? "lg:hidden" : ""
                   } px-6 py-6 md:py-8 lg:-mr-0.25 lg:text-xs lg:font-semibold ${
                     item.url === pathname.hash
@@ -73,6 +76,9 @@ const Navbar = () => {
               <button className="hidden lg:flex">
                 <NavLink
                   to="/sign-in"
+                  style={({ isActive }) =>
+                    isActive ? { color: "#AC6AFF" } : {}
+                  }
                   className={`cursor-pointer hidden lg:flex items-center gap-1 font-code text-n-1  justify-center  transition-colors hover:text-[#AC6AFF] mr-8 font-semibold`}
                 >
                   <svg

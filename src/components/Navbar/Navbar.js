@@ -8,7 +8,7 @@ import MenuSvg from "../../assets/MenuSvg";
 import { navigation } from "../../constants/navbarMenu";
 import { SmallScreenNavBackground } from "../SmallScreenNavBackground/SmallScreenNavBackground";
 
-const Navbar = () => {
+const Navbar = ({ cart }) => {
   const pathname = useLocation();
   const [currentUser, setCurrentUser] = useState(false);
   const [openNavigation, setOpenNavigation] = useState(false);
@@ -102,9 +102,12 @@ const Navbar = () => {
 
               <NavLink
                 to="/cart"
-                className={`cursor-pointer hidden lg:flex items-center gap-1 font-code text-n-1  justify-center  transition-colors p-2 bg-[#AC6AFF] hover:bg-transparent`}
+                className={`cursor-pointer hidden lg:flex items-center gap-1 font-code text-n-1  justify-center  transition-colors p-2 bg-[#AC6AFF] hover:bg-transparent relative`}
                 style={{ borderRadius: "50%" }}
               >
+                <div className="absolute rounded-full w-4 h-4 top-0 right-0 text-sm shadow-lg shadow-black bg-white text-black flex items-center justify-center">
+                  {cart.length}
+                </div>
                 <img src={cartIcon} alt="cart" className="w-9 h-9" />
               </NavLink>
             </>

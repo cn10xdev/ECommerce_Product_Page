@@ -12,6 +12,7 @@ function App() {
   const [cart, setCart] = useState([]);
 
   const addToCart = (product) => {
+    console.log("************************");
     let updatedCart = [...cart];
     const productIndex = updatedCart.findIndex(
       (item) => item.id === product.id

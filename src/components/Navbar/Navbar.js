@@ -54,7 +54,7 @@ const Navbar = ({ cart }) => {
                   style={({ isActive }) =>
                     isActive ? { color: "#AC6AFF" } : {}
                   }
-                  className={`block relative font-code text-2xl uppercase lg:cursive lg:text-[1rem] lg:capitalize transition-colors hover:text-color-1 ${
+                  className={`block relative font-code text-2xl uppercase lg:cursive lg:text-[1.1rem] lg:capitalize transition-colors hover:text-color-1 ${
                     item.onlyMobile ? "lg:hidden" : ""
                   } px-6 py-6 md:py-8 lg:-mr-0.25 lg:text-xs lg:font-semibold ${
                     item.url === pathname.hash

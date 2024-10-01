@@ -1,7 +1,7 @@
-import React, { useState } from "react";
-import ProductCard from "./components/ProductCard";
-import Cart from "./components/Cart";
-import "./styles.css";
+import React, { useState } from 'react';
+import ProductCard from './components/ProductCard';
+import Cart from './components/Cart';
+import './styles.css';
 
 function App() {
   const [cart, setCart] = useState([]);

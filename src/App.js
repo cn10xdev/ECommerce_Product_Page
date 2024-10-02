@@ -1,26 +1,23 @@
 import React, { useState } from 'react';
-import ProductCard from './components/ProductCard';
-import Cart from './components/Cart';
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
+
+/* Style */
 import './styles.css';
+
+/* Components */
+import Navbar from "./components/Navbar/Navbar";
+import SignIn from "./pages/SignIn/SignIn";
+import SignUp from "./pages/SignUp/SignUp";
+import Products from "./components/Products/Products";
+import Cart from "./pages/Cart/Cart";
+import Home from "./pages/Home/Home";
 
 function App() {
     const [cart, setCart] = useState([]);
-    const products = [
-        {
-            id: 1,
-            name: 'Product 1',
-            price: 50,
-            image: 'https://via.placeholder.com/150',
-            quantity: 1,
-        },
-        {
-            id: 2,
-            name: 'Product 2',
-            price: 100,
-            image: 'https://via.placeholder.com/150',
-            quantity: 1,
-        }
-    ];
+   
 
     const addToCart = (product) => {
         let updatedCart = [...cart];
@@ -45,16 +42,45 @@ function App() {
         }
     };
 
+        const router = createBrowserRouter([
+        {
+            path: "/",
+            element: <Navbar />,
+            children: [
+            {
+                index: true,
+                element: <Home />,
+            },
+            {
+                path: "/sign-in",
+                element: <SignIn />,
+            },
+            {
+                path: "/sign-up",
+                element: <SignUp />,
+            },
+            {
+                path: "/products",
+                element: (
+                <Products
+                    cart={cart}
+                    updateQuantity={updateQuantity}
+                    addToCart={addToCart}
+                />
+                ),
+            },
+            {
+                path: "/cart",
+                element: <Cart cart={cart} updateQuantity={updateQuantity} />,
+            },
+            ],
+        },
+        ]);
+
     return (
-        <div className="App">
-            <h1>Product Page</h1>
-            <div className="products">
-                {products.map(product => (
-                    <ProductCard key={product.id} product={product} addToCart={addToCart} />
-                ))}
-            </div>
-            <Cart cart={cart} updateQuantity={updateQuantity} />
-        </div>
+    <>
+      <RouterProvider router={router} />
+    </>
     );
 }
 

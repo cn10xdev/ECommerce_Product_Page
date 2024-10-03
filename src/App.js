@@ -64,10 +64,6 @@ function App() {
             />
           ),
         },
-        // {
-        //   path: "/products/:id",
-        //   element: currentUser ? <Product /> : <Navigate to="/" />,
-        // },
         {
           path: "/cart",
           element: <Cart cart={cart} updateQuantity={updateQuantity} />,

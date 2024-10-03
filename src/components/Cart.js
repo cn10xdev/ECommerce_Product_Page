@@ -14,7 +14,7 @@ function Cart({ cart, updateQuantity }) {
                         <input
                             type="number"
                             min="1"
-                            value={item.quantity}
+                            defaultValue={item.quantity}
                             onChange={(e) => updateQuantity(item.id, parseInt(e.target.value))}
                         />
                     </div>

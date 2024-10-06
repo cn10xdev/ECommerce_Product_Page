@@ -4,33 +4,37 @@
     "description": "A basic e-commerce product page built with React, HTML, and CSS to provide a learning opportunity for new developers by including bugs for them to debug and fix.",
     "main": "index.js",
     "scripts": {
-      "start": "react-scripts start",
-      "build": "react-scripts build",
-      "test": "react-scripts test",
-      "eject": "react-scripts eject"
+        "start": "react-scripts start",
+        "build": "react-scripts build",
+        "test": "react-scripts test",
+        "eject": "react-scripts eject"
     },
     "dependencies": {
-      "react": "^18.2.0",
-      "react-dom": "^18.2.0",
-      "react-scripts": "^5.0.1"
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "react-just-parallax": "^3.1.16",
+        "react-router-dom": "^6.26.2",
+        "react-scripts": "^5.0.1"
     },
     "eslintConfig": {
-      "extends": [
-        "react-app",
-        "react-app/jest"
-      ]
+        "extends": [
+            "react-app",
+            "react-app/jest"
+        ]
     },
     "browserslist": {
-      "production": [
-        ">0.2%",
-        "not dead",
-        "not op_mini all"
-      ],
-      "development": [
-        "last 1 chrome version",
-        "last 1 firefox version",
-        "last 1 safari version"
-      ]
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    },
+    "devDependencies": {
+        "tailwindcss": "^3.4.13"
     }
-  }
-  
+}

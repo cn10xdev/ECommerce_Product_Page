@@ -1,0 +1,144 @@
+.bodyContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 80%;
+  /* width: 100vw; */
+  /* border: 2px solid black; */
+}
+
+.loaderContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 70vh;
+  width: 95vw;
+}
+
+.cartContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 50px;
+}
+
+.cartItemsAndPriceContainer {
+  width: 95%;
+  /* margin-top: 15px; */
+  display: flex;
+  /* align-items: center; */
+  justify-content: space-around;
+  height: 80vh;
+  /* background-color: white; */
+}
+
+.cartItemsAndOrderContainer {
+  width: 65%;
+  height: 100%;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3), 0 2px 2px rgba(0, 0, 0, 0.2);
+  display: flex;
+  /* align-items: center; */
+  flex-direction: column;
+}
+
+.placeButtonContainer {
+  width: 100%;
+  height: 20%;
+  box-shadow: 4px 2px 4px rgba(0, 0, 0, 0.3), 4px 6px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  /* padding: 20px; */
+}
+
+.placeButtonContainer button {
+  margin-right: 20px;
+  padding: 20px 30px;
+  cursor: pointer;
+  font-weight: 700;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  animation: button-color 2s ease-in-out alternate infinite;
+}
+
+.loaderContainer {
+  margin-right: 40px;
+}
+
+.priceBreakUpContainer {
+  width: 30%;
+  /* height: auto; */
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3), 0 2px 2px rgba(0, 0, 0, 0.2);
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  flex-direction: column;
+}
+
+.priceDetailsHeader {
+  width: 100%;
+  /* padding: 10px; */
+  font-size: 1rem;
+  /* color: gray; */
+  font-weight: 700;
+  margin-top: 8px;
+}
+
+.priceDetailsHeader p {
+  margin-left: 15px;
+}
+
+.priceContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+.priceContainer p {
+  margin-top: 8px;
+}
+.delivery {
+  text-decoration: line-through;
+  color: rgb(188, 74, 74);
+}
+
+.textGreen {
+  color: rgb(48, 29, 174);
+}
+
+.totalAmountContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  border-bottom: 1px dashed rgb(15, 14, 14);
+  border-top: 1px dashed rgb(23, 19, 19);
+  font-size: 0.8rem;
+  font-weight: 400;
+  margin-top: 10px;
+}
+
+.totalAmountContainer h4 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+@keyframes button-color {
+  0% {
+    background-color: orangered;
+  }
+
+  50% {
+    background-color: rgb(217, 82, 33);
+  }
+
+  100% {
+    background-color: rgb(234, 96, 46);
+  }
+}
